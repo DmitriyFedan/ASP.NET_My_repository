@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\WORKED\\web repos\\My_testWEB_Repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj": {}
+    "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj": {}
   },
   "projects": {
-    "G:\\WORKED\\web repos\\My_testWEB_Repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj": {
+    "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WORKED\\web repos\\My_testWEB_Repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj",
+        "projectUniqueName": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj",
         "projectName": "ASP_WEB_app_MVC_1",
-        "projectPath": "G:\\WORKED\\web repos\\My_testWEB_Repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj",
+        "projectPath": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\ASP_WEB_app_MVC_1.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "G:\\WORKED\\web repos\\My_testWEB_Repository\\ASP_WEB_app_MVC_1\\obj\\",
+        "outputPath": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

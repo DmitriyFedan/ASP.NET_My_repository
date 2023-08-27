@@ -19,16 +19,17 @@ namespace ASP_WEB_app_MVC_1
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseHttpsRedirection(); //  позволяет запрос хттп конверирвоатьв хттпс 
+            app.UseStaticFiles(); // позволяет использ статические файлы  жаваскрипт сиэсэс картинки текст итд
 
-            app.UseRouting();
+            app.UseRouting(); // добавление шаблона маршрутизации 
 
             app.UseAuthorization();
-
+            
+            //http:// localhost:5001/hello/start         hello  контроллер   start - дейстк=вие  action
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{first?}/{second?}/{thirth?}");   // pattern: "{controller=Home}/{action=Index}/{id?}/{a?}");
 
             app.Run();
         }
