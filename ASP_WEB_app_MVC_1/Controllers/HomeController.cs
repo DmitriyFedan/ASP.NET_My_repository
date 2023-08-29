@@ -7,16 +7,22 @@ namespace ASP_WEB_app_MVC_1.Controllers
 {
     public class HomeController : Controller
     {
+
         private readonly ILogger<HomeController> _logger;
+        private readonly ProductStrorage _productStrorage;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            //_productStrorage = new ProductStrorage();
         }
 
-        public IActionResult Index(string name, int age)
+        public string Index()
         {
-            return View();
+            //return _productStrorage.GetProduct(1002);
+            //return _productStrorage.GetAllProducts();
+            //return View();
+            return "HOMe INDEX";
         }
 
         public IActionResult Privacy()
