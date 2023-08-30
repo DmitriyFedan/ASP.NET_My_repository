@@ -5,7 +5,7 @@ namespace ASP_WEB_app_MVC_1.Models
 {
     public class Product
     {
-        private static int uniqueId = 1000;
+        static int uniqueId = 1000;
         private int _id;
         private string _name;
         private int _cost;

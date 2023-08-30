@@ -13,7 +13,7 @@ namespace ASP_WEB_app_MVC_1.Controllers
         public ProductController()
         {
             
-            _productStrorage = new ProductStrorage();
+            _productStrorage = ProductStrorage.GetStorage();
         }
         public string Index(int first)
         {

@@ -1,12 +1,15 @@
-﻿using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Text;
 
 namespace ASP_WEB_app_MVC_1.Models
 {
     public class ProductStrorage
     {
+        private static ProductStrorage instance;
+
         public List<Product> Products { get; set; }
 
-        public ProductStrorage()
+        private ProductStrorage()
         {
             Products = new List<Product>();
 
@@ -14,6 +17,16 @@ namespace ASP_WEB_app_MVC_1.Models
             {
                 Products.Add(new Product());
             }
+        }
+
+        public static ProductStrorage GetStorage()
+        {
+            if (instance == null)
+            {
+                instance = new ProductStrorage();
+            }
+
+            return instance;
         }
 
         public string GetAllProducts()
