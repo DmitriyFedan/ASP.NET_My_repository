@@ -29,7 +29,7 @@ namespace ASP_WEB_app_MVC_1
             //http:// localhost:5001/hello/start         hello  контроллер   start - дейстк=вие  action
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{first?}/{second?}/{thirth?}");   // pattern: "{controller=Home}/{action=Index}/{id?}/{a?}");
+                pattern: "{controller=myshop}/{action=allproducts}/{first?}/{second?}/{thirth?}");   // pattern: "{controller=Home}/{action=Index}/{id?}/{a?}");
 
             app.Run();
         }

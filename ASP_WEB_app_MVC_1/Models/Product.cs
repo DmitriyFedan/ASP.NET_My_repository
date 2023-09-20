@@ -8,8 +8,14 @@ namespace ASP_WEB_app_MVC_1.Models
         static int uniqueId = 1000;
         private int _id;
         private string _name;
-        private int _cost;
+        private decimal _cost;
         private string _description;
+
+        public string Name  => _name;
+
+        public decimal Cost => _cost;
+
+        public string Description => _description;
 
         public int Id 
         {
@@ -21,7 +27,7 @@ namespace ASP_WEB_app_MVC_1.Models
             _id = uniqueId;
             _name = "Product " + uniqueId.ToString();
             _cost = new Random().Next(100, 1000);
-            _description = $"Description {uniqueId}";
+            _description = $"Description bla bla bla {uniqueId}";
             uniqueId++;
         }
 

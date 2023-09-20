@@ -7,13 +7,13 @@ namespace ASP_WEB_app_MVC_1.Controllers
     public class ProductController : Controller
     {
         
-        private readonly ProductStrorage _productStrorage;
+        private readonly ProductStorage _productStorage;
 
 
         public ProductController()
         {
-            
-            _productStrorage = ProductStrorage.GetStorage();
+          
+            _productStorage = ProductStorage.GetStorage();
         }
         public string Index(int first)
         {
@@ -22,7 +22,7 @@ namespace ASP_WEB_app_MVC_1.Controllers
                 return "Id null error";
             }
 
-            return _productStrorage.GetProduct(first);
+            return _productStorage.GetProduct(first).ToString();
 
         }
     }

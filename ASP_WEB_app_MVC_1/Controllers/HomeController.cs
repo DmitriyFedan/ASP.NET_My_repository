@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ASP_WEB_app_MVC_1.Controllers
 {
@@ -9,20 +10,17 @@ namespace ASP_WEB_app_MVC_1.Controllers
     {
 
         private readonly ILogger<HomeController> _logger;
-        private readonly ProductStrorage _productStrorage;
+        private readonly ProductStorage _productStrorage;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            //_productStrorage = new ProductStrorage();
+            _productStrorage = ProductStorage.GetStorage();
         }
 
-        public string Index()
+        public IActionResult Index()
         {
-            //return _productStrorage.GetProduct(1002);
-            //return _productStrorage.GetAllProducts();
-            //return View();
-            return "HOMe INDEX";
+            return View();
         }
 
         public IActionResult Privacy()
