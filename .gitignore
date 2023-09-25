@@ -13,4 +13,6 @@ bld/
 
 # Roslyn cache directories
 *.ide/
-ASP_WEB_app_MVC_1/
+ASP_WEB_app_MVC_1/bin/
+ASP_WEB_app_MVC_1/.vs/
+ASP_WEB_app_MVC_1/obj/
