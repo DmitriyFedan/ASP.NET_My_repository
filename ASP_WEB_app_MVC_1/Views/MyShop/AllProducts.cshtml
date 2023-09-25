@@ -1,0 +1,31 @@
+﻿@using ASP_WEB_app_MVC_1.Models.ViewModels;
+@using ASP_WEB_app_MVC_1.Models;
+@model ShopModel
+
+@{
+    ViewData["Title"] = "Menu Page";
+}
+
+
+<div class="row">
+    @foreach(var product in Model.ProductStorage.GetProductsCollection())
+    {
+        <div class="col-3 card shadow">
+            <img class="card-img-top" src="/images/test_image.jpg" 
+                 alt="not_found" />
+
+            <div class="card-body">
+                <a style="color:black" 
+                  
+                    href ="/MyShop/CurrentProduct?first=@product.Id">
+                    <h5>@product.Name</h5>
+                </a>
+
+                <h5>@product.Cost руб</h5>
+
+                <a class="btn btn-dark"  role="button" href="/Basket/AddProduct?first=@product.Id">Добавить в корзину</a>
+            </div>        
+        </div>
+    }
+
+</div>

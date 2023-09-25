@@ -1,0 +1,50 @@
+﻿@using ASP_WEB_app_MVC_1.Models;
+
+@model Basket
+
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Цена, руб.</th>
+                    <th>Количество</th>
+                    <th>стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(Product item in Model.Products)
+                {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Cost</td>
+                    <td>@item.Amount</td>
+                    <td>@item.SummaryCost</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <h3 class="text-end">Общая стоимость: @Model.BasketTotalPrice</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-7">
+
+    </div>
+    <div class="col-2">
+
+        <a role="button"  asp-controller="MyShop" asp-action="AllProducts" class="btn btn-dark">Вернуться в меню</a>
+    </div>
+
+    <div class="col-2">
+
+        <a role="button" class="btn btn-danger">Оформить заказ</a>
+    </div>
+    
+</div>
+
+
+
