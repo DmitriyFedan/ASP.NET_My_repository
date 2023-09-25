@@ -10,14 +10,20 @@ namespace ASP_WEB_app_MVC_1.Models
         private string _name;
         private decimal _cost;
         private string _description;
+        private int _amount;
 
-        public string Name  => _name;
+
+        public string Name => _name;
 
         public decimal Cost => _cost;
 
         public string Description => _description;
 
-        public int Id 
+        public int Amount => _amount;
+
+        public decimal SummaryCost => Cost * Amount;
+
+        public int Id
         {
             get => _id;
         }
@@ -28,6 +34,7 @@ namespace ASP_WEB_app_MVC_1.Models
             _name = "Product " + uniqueId.ToString();
             _cost = new Random().Next(100, 1000);
             _description = $"Description bla bla bla {uniqueId}";
+            _amount = 0;
             uniqueId++;
         }
 
@@ -43,9 +50,14 @@ namespace ASP_WEB_app_MVC_1.Models
             sb.AppendLine();
             sb.Append(_description);
             sb.AppendLine();
-            
+
 
             return sb.ToString();
+        }
+
+        public void AddAmount(int increment)
+        {
+            _amount += increment;
         }
     }
 }

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ASP_WEB_app_MVC_1.bundle.scp.css"
     },
     {
+      "Id": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\wwwroot\\Images\\test_image.jpg",
+      "PackagePath": "staticwebassets\\Images\\test_image.jpg"
+    },
+    {
       "Id": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

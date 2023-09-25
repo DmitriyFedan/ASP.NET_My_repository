@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "imnt5nFQb/S9C/hG2DwNUqx5gR/1ks+XAVGUMovm0AM=",
+  "Hash": "Mq31MpN2T4yyInal//vNI/ynucUGTlViqS9ImGOnks0=",
   "Source": "ASP_WEB_app_MVC_1",
   "BasePath": "_content/ASP_WEB_app_MVC_1",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\wwwroot\\Images\\test_image.jpg",
+      "SourceId": "ASP_WEB_app_MVC_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\wwwroot\\",
+      "BasePath": "_content/ASP_WEB_app_MVC_1",
+      "RelativePath": "Images/test_image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\test_image.jpg"
     },
     {
       "Identity": "G:\\WORKED\\web repos\\ASP.NET_My_repository\\ASP_WEB_app_MVC_1\\wwwroot\\js\\site.js",
