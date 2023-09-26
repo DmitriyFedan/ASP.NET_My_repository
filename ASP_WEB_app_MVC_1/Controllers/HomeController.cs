@@ -1,9 +1,7 @@
 ﻿using ASP_WEB_app_MVC_1.Models.ViewModels;
-using ASP_WEB_app_MVC_1.Models.Storages;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
 using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
+using ASP_WEB_app_MVC_1.Services.Interfaces;
 
 namespace ASP_WEB_app_MVC_1.Controllers
 {
@@ -11,12 +9,12 @@ namespace ASP_WEB_app_MVC_1.Controllers
     {
 
         private readonly ILogger<HomeController> _logger;
-        private readonly ProductStorage _productStrorage;
+        private readonly IProductStorage _productStrorage;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IProductStorage productStorage)
         {
             _logger = logger;
-            _productStrorage = ProductStorage.GetStorage();
+            _productStrorage = productStorage;
         }
 
         public IActionResult Index()

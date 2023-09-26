@@ -1,22 +1,25 @@
 ﻿using ASP_WEB_app_MVC_1.Models;
-using ASP_WEB_app_MVC_1.Models.Storages;
+using ASP_WEB_app_MVC_1.Services.Interfaces;
+using ASP_WEB_app_MVC_1.Services.Storages;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP_WEB_app_MVC_1.Controllers
 {
     public class BasketController : Controller
     {
-        private BasketStorage _basketStorage;
+        private IBasketStorage _basketStorage;
 
-        private ProductStorage _productStorage;
+        private IProductStorage _productStorage;
 
-        private UserStorage _userStorage;
+        private IUserStorage _userStorage;
 
-        public BasketController() 
+        public BasketController(IProductStorage productStorage,
+                                IBasketStorage basketStorage,
+                                IUserStorage userStorage) 
         {
-            _basketStorage = BasketStorage.GetBasketStorage();
-            _productStorage = ProductStorage.GetStorage();
-            _userStorage = UserStorage.GetUserStorage();
+            _basketStorage = basketStorage;
+            _productStorage = productStorage;
+            _userStorage = userStorage;
         }
 
         public IActionResult UserBasket()
@@ -30,7 +33,7 @@ namespace ASP_WEB_app_MVC_1.Controllers
         {
             var userBasket = _basketStorage.TryGetBasketById(_userStorage.GetAdminUser().Id);  // TODO  hardcoded user id 
 
-            var product = _productStorage.GetProduct(first);
+            var product = _productStorage.GetProductById(first);
             userBasket.TryAddProduct(product, 1);  // TODO  hardcoded amount 
 
             return RedirectToAction("AllProducts", "MyShop");

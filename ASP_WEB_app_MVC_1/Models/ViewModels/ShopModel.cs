@@ -1,14 +1,15 @@
-﻿using ASP_WEB_app_MVC_1.Models.Storages;
+﻿using ASP_WEB_app_MVC_1.Services.Interfaces;
+
 
 namespace ASP_WEB_app_MVC_1.Models.ViewModels
 {
     public class ShopModel
     {
-        public ProductStorage ProductStorage { get; }
+        public IProductStorage ProductStorage { get; }
 
         public User User { get; }
 
-        public ShopModel(ProductStorage productStorage, User user)
+        public ShopModel(IProductStorage productStorage, User user)
         {
             ProductStorage = productStorage;
             User = user;

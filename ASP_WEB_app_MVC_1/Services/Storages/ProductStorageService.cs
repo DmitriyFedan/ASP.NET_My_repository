@@ -1,15 +1,13 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using ASP_WEB_app_MVC_1.Services.Interfaces;
 using System.Text;
 
 namespace ASP_WEB_app_MVC_1.Models.Storages
 {
-    public class ProductStorage
+    public class ProductStorageService : IProductStorage
     {
-        private static ProductStorage instance;
+        public List<Product> Products { get; }
 
-        public List<Product> Products { get; set; }
-
-        private ProductStorage()
+        public ProductStorageService()
         {
             Products = new List<Product>();
 
@@ -19,16 +17,8 @@ namespace ASP_WEB_app_MVC_1.Models.Storages
             }
         }
 
-        public static ProductStorage GetStorage()
-        {
-            if (instance == null)
-            {
-                instance = new ProductStorage();
-            }
 
-            return instance;
-        }
-
+        // Todo  remove this method (newer used)
         public string GetAllProducts()
         {
             StringBuilder sb = new StringBuilder();
@@ -43,7 +33,7 @@ namespace ASP_WEB_app_MVC_1.Models.Storages
             return Products;
         }
 
-        public Product GetProduct(int id)
+        public Product GetProductById(int id)
         {
             return Products.FirstOrDefault(p => p.Id.Equals(id));
         }

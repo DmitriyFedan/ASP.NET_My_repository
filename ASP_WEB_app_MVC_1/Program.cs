@@ -1,3 +1,7 @@
+using ASP_WEB_app_MVC_1.Models.Storages;
+using ASP_WEB_app_MVC_1.Services.Interfaces;
+using ASP_WEB_app_MVC_1.Services.Storages;
+
 namespace ASP_WEB_app_MVC_1
 {
     public class Program
@@ -8,6 +12,9 @@ namespace ASP_WEB_app_MVC_1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<IProductStorage, ProductStorageService>();
+            builder.Services.AddSingleton<IBasketStorage, BasketStorageService>();
+            builder.Services.AddSingleton<IUserStorage, UserStorage>();
 
             var app = builder.Build();
 
@@ -18,7 +25,7 @@ namespace ASP_WEB_app_MVC_1
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+           
             app.UseHttpsRedirection(); //  позволяет запрос хттп конверирвоатьв хттпс 
             app.UseStaticFiles(); // позволяет использ статические файлы  жаваскрипт сиэсэс картинки текст итд
 

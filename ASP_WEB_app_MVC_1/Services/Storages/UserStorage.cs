@@ -1,12 +1,12 @@
-﻿namespace ASP_WEB_app_MVC_1.Models.Storages
-{
-    public class UserStorage
-    {
-        private static UserStorage _singletone;
+﻿using ASP_WEB_app_MVC_1.Models;
 
+namespace ASP_WEB_app_MVC_1.Services.Storages
+{
+    public class UserStorage : IUserStorage
+    {
         private static List<User> _users;
 
-        private UserStorage()
+        public UserStorage()
         {
             _users = new List<User>
             {
@@ -14,19 +14,9 @@
             };
         }
 
-        public static UserStorage GetUserStorage()
-        {
-            if (_singletone == null)
-            {
-                _singletone = new UserStorage();
-            }
-
-            return _singletone;
-        }
-
         public User GetAdminUser()
         {
-            if( _users != null)
+            if (_users != null)
             {
                 return _users.FirstOrDefault(u => u.Name == "Admin");
             }
